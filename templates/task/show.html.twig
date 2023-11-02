@@ -13,11 +13,12 @@
 
         <div class="task-elem">
             <h2>
-                <p>
-                    <span class="title">{{ task.name }}</span>
-                    <span>{{ task.date ? task.date|date('Y-m-d') : '' }}</span>
-                </p>
+                <span class="title">{{ task.name }}</span>
             </h2>
+            <p>
+                <span>{{ task.date ? task.date|date('Y-m-d') : '' }}</span> -
+                <span>{{ task.category.name }}</span>
+            </p>
         </div>
         {# <a href="{{ path('app_task_edit', {'id': task.id}) }}">edit</a> #}
     </div>
