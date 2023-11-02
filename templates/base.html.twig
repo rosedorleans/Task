@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Task - {% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="" type="image/x-icon">
+
+        <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <a id="mainTitle" href="{{ path('app_task_index') }}">Task</a>
+
+        </header>
+
+        <div id="{% block idPageContent %}{% endblock %}" class="page-content">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer></footer>
+
+    </body>
+</html>

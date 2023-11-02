@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New task{% endblock %}
+
+{% block idPageContent %}newTaskPage{% endblock %}
+
+{% block body %}
+    <h2>Nouvelle tache</h2>
+
+    {{ include('task/_form.html.twig') }}
+
+    <a href="{{ path('app_task_index') }}" class="btn second-btn">Retour</a>
+{% endblock %}

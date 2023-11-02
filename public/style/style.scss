@@ -1,0 +1,13 @@
+
+
+#mainTitle {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: .8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
