@@ -81,7 +81,7 @@
 
 - [ ] ORM 
 - [ ] Formulaire / Validation
-- [ ] Logs
+- [x] Logs
 - [x] Tests 
 - [ ] Sécurité
 - [ ] Traduction 
