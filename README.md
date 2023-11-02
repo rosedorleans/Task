@@ -85,7 +85,7 @@
 - [x] Tests 
 - [ ] Sécurité
 - [ ] Traduction 
-- [ ] Mail + Messenger
+- [x] Mail + Messenger
 - [ ] Api / Serialization
 
 
