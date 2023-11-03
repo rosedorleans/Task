@@ -28,6 +28,7 @@ body {
     }
 
     .link {
+        width: fit-content;
         color: #000;
         text-decoration: none;
         border-bottom: 1px solid;
@@ -68,6 +69,7 @@ body {
             width: fit-content;
 
             input[type="text"],
+            input[type="password"],
             textarea,
             select {
                 padding: 5px;
@@ -78,37 +80,39 @@ body {
                     outline:solid 1px #00000061;
                 }
             }
+            
+            h2 {
+                margin: 1vh 0 -15px;
+            }
+
+            .body {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                width: fit-content;
+
+                .elem {
+                    &.flex div div {
+                        display: flex;
+                        gap: 5px;
+
+                        input[type="checkbox"],
+                        label {
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &#index_page {
 
             // filters
             form {
-                h2 {
-                    margin: 1vh 0 -15px;
-                }
-
-                .body {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1vh;
-                    width: fit-content;
-
-                    .elem {
-                        &.flex div div {
-                            display: flex;
-                            gap: 5px;
-
-                            input[type="checkbox"],
-                            label {
-
-                                &:hover {
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-                    }
-                }
+                
             }
 
             ul.task-list {
@@ -142,6 +146,39 @@ body {
 
                 #task_date {
                     flex-direction: row;
+                }
+            }
+        }
+
+        &#admin-users_page {
+            table {
+                td {
+                    padding: 1vh 1vw;
+                    border: 1px solid;
+                }
+            }
+
+            table {
+                font-family: #f2f2f2;
+                border-collapse: collapse;
+                width: 100%;
+                td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+                th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color: #000;
+                    color: #FFF;
+                }
+                tr {
+                    &:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
                 }
             }
         }

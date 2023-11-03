@@ -79,14 +79,15 @@
 <!-- Avancée -->
 ## Avancée
 
-- [ ] ORM 
-- [ ] Formulaire / Validation
+- [x] ORM 
+- [x] Formulaire / Validation
 - [x] Logs
 - [x] Tests 
-- [ ] Sécurité
+- [ ] Sécurité (admin) (https://nouvelle-techno.fr/articles/live-coding-gerer-les-roles-utilisateur-avec-symfony-4)
 - [ ] Traduction 
 - [x] Mail + Messenger
 - [ ] Api / Serialization
+- [x] Filtres (https://grafikart.fr/tutoriels/filtre-produit-symfony-1211)
 
 
 <p align="right">(<a href="#readme-top">top</a>)</p>

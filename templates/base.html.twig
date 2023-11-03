@@ -18,13 +18,14 @@
         <header>
             <a id="mainTitle" href="{{ path('app_task_index') }}" class="hover">Task</a>
             {% if app.user %}
-
                 <a href="{{ path('app_logout') }}" class="hover">Déconnexion</a>
-            {% else %}
 
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin_index') }}" class="hover">ADMIN</a>
+                {% endif %}
+            {% else %}
                     <a href="{{ path('app_login') }}" class="hover">Se connecter</a>
                     <a href="{{ path('app_register') }}" class="hover">S'inscrire</a>
-
             {% endif %}
         </header>
 

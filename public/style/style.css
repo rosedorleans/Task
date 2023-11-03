@@ -23,6 +23,8 @@ body .btn {
   text-decoration: none;
 }
 body .link {
+  width: -moz-fit-content;
+  width: fit-content;
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid;
@@ -59,6 +61,7 @@ body .page-content form {
   width: fit-content;
 }
 body .page-content form input[type=text],
+body .page-content form input[type=password],
 body .page-content form textarea,
 body .page-content form select {
   padding: 5px;
@@ -66,26 +69,27 @@ body .page-content form select {
   border-radius: 5px;
 }
 body .page-content form input[type=text]:focus,
+body .page-content form input[type=password]:focus,
 body .page-content form textarea:focus,
 body .page-content form select:focus {
   outline: solid 1px rgba(0, 0, 0, 0.3803921569);
 }
-body .page-content#index_page form h2 {
+body .page-content form h2 {
   margin: 1vh 0 -15px;
 }
-body .page-content#index_page form .body {
+body .page-content form .body {
   display: flex;
   flex-direction: column;
   gap: 1vh;
   width: -moz-fit-content;
   width: fit-content;
 }
-body .page-content#index_page form .body .elem.flex div div {
+body .page-content form .body .elem.flex div div {
   display: flex;
   gap: 5px;
 }
-body .page-content#index_page form .body .elem.flex div div input[type=checkbox]:hover,
-body .page-content#index_page form .body .elem.flex div div label:hover {
+body .page-content form .body .elem.flex div div input[type=checkbox]:hover,
+body .page-content form .body .elem.flex div div label:hover {
   cursor: pointer;
 }
 body .page-content#index_page ul.task-list {
@@ -114,4 +118,29 @@ body .page-content#newTask_page form div {
 }
 body .page-content#newTask_page form #task_date {
   flex-direction: row;
+}
+body .page-content#admin-users_page table td {
+  padding: 1vh 1vw;
+  border: 1px solid;
+}
+body .page-content#admin-users_page table {
+  font-family: #f2f2f2;
+  border-collapse: collapse;
+  width: 100%;
+}
+body .page-content#admin-users_page table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+body .page-content#admin-users_page table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000;
+  color: #FFF;
+}
+body .page-content#admin-users_page table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }/*# sourceMappingURL=style.css.map */
