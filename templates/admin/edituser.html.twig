@@ -22,7 +22,7 @@
                 {{ form_row(userForm.roles) }}
             </div>
         </div>
-        {{ form_row(userForm.valider) }}
+       <button type="submit" class="btn hover">{{ button_label|default('Valider') }}</button>
     {{ form_end(userForm) }}
 
 {% endblock %}

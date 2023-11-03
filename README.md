@@ -83,11 +83,12 @@
 - [x] Formulaire / Validation
 - [x] Logs
 - [x] Tests 
-- [ ] Sécurité (admin) (https://nouvelle-techno.fr/articles/live-coding-gerer-les-roles-utilisateur-avec-symfony-4)
+- [x] Sécurité (admin) (https://nouvelle-techno.fr/articles/live-coding-gerer-les-roles-utilisateur-avec-symfony-4)
 - [ ] Traduction 
 - [x] Mail + Messenger
 - [ ] Api / Serialization
 - [x] Filtres (https://grafikart.fr/tutoriels/filtre-produit-symfony-1211)
+- [ ] Pagination
 
 
 <p align="right">(<a href="#readme-top">top</a>)</p>

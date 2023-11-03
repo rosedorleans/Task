@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin modif categorie{% endblock %}
+
+{% block idPageContent %}admin-categories-edit{% endblock %}
+
+{% block body %}
+    <a href="{{ path('admin_categories') }}" class="link hover">Retour</a>
+
+    {{ form_start(categoryForm) }}
+        <h2>Modifier une categorie</h2>
+
+        <div class="my-custom-class-for-errors">
+            {{ form_errors(categoryForm) }}
+        </div>
+
+        <div class="body">
+            <div class="elem">
+                {{ form_row(categoryForm.name) }}
+            </div>
+        </div>
+       <button type="submit" class="btn hover">{{ button_label|default('Valider') }}</button>
+    {{ form_end(categoryForm) }}
+
+{% endblock %}

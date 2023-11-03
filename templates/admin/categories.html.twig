@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin categorie{% endblock %}
+
+{% block idPageContent %}admin-categories{% endblock %}
+
+{% block body %}
+    <a href="{{ path('admin_index') }}" class="link hover">Retour</a>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>name</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.name }}</td>
+                    <td><a href="{{ path('admin_category_edit', {'id': category.id}) }}" class="link">Modifier</a></td>
+                </tr>
+                
+            {% else %}
+                <p>Aucune categorie</p>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

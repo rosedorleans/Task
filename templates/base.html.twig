@@ -16,17 +16,20 @@
     </head>
     <body>
         <header>
-            <a id="mainTitle" href="{{ path('app_task_index') }}" class="hover">Task</a>
-            {% if app.user %}
-                <a href="{{ path('app_logout') }}" class="hover">Déconnexion</a>
-
-                {% if is_granted('ROLE_ADMIN') %}
-                    <a href="{{ path('admin_index') }}" class="hover">ADMIN</a>
+            <div>
+                <a id="mainTitle" href="{{ path('app_task_index') }}" class="hover">Task</a>
+                {% if app.user and is_granted('ROLE_ADMIN')%}
+                    <a href="{{ path('admin_index') }}" class="hover link">ADMIN</a>
                 {% endif %}
-            {% else %}
-                    <a href="{{ path('app_login') }}" class="hover">Se connecter</a>
-                    <a href="{{ path('app_register') }}" class="hover">S'inscrire</a>
-            {% endif %}
+            </div>
+            <div>
+                {% if app.user %}
+                    <a href="{{ path('app_logout') }}" class="hover link">Déconnexion</a>
+                {% else %}
+                        <a href="{{ path('app_login') }}" class="hover link">Se connecter</a>
+                        <a href="{{ path('app_register') }}" class="hover link">S'inscrire</a>
+                {% endif %}
+            </div>
         </header>
 
         <div id="{% block idPageContent %}{% endblock %}_page" class="page-content">

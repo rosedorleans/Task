@@ -31,19 +31,26 @@ body .link {
 }
 body header {
   display: flex;
+  justify-content: space-between;
   gap: 1vw;
   align-items: baseline;
   padding: 2vh 2vw 1.5vw;
   background-color: #000;
 }
-body header a {
-  color: #FFF;
+body header > div {
+  display: flex;
+  align-items: baseline;
+  gap: 2vw;
 }
-body header a#mainTitle {
+body header > div #mainTitle {
+  color: #FFF;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   border: none;
+}
+body header > div .link {
+  color: #FFF;
 }
 body .page-content {
   margin: 1vh 2vw;
@@ -59,6 +66,7 @@ body .page-content form {
   gap: 2vh;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 2vh;
 }
 body .page-content form input[type=text],
 body .page-content form input[type=password],
@@ -83,6 +91,11 @@ body .page-content form .body {
   gap: 1vh;
   width: -moz-fit-content;
   width: fit-content;
+}
+body .page-content form .body .elem > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }
 body .page-content form .body .elem.flex div div {
   display: flex;
@@ -124,23 +137,17 @@ body .page-content#admin_page ul {
   flex-direction: column;
   gap: 1vh;
 }
-body .page-content#admin-users_page table {
+body .page-content#admin-users_page table, body .page-content#admin-categories_page table {
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 2vh;
-}
-body .page-content#admin-users_page table td {
-  padding: 1vh 1vw;
-  border: 1px solid;
-}
-body .page-content#admin-users_page table {
-  font-family: #f2f2f2;
   border-collapse: collapse;
-  width: 100%;
 }
-body .page-content#admin-users_page table td {
+body .page-content#admin-users_page table td, body .page-content#admin-categories_page table td {
   border: 1px solid #ddd;
   padding: 8px;
 }
-body .page-content#admin-users_page table th {
+body .page-content#admin-users_page table th, body .page-content#admin-categories_page table th {
   border: 1px solid #ddd;
   padding: 8px;
   padding-top: 12px;
@@ -149,6 +156,9 @@ body .page-content#admin-users_page table th {
   background-color: #000;
   color: #FFF;
 }
-body .page-content#admin-users_page table tr:nth-child(even) {
+body .page-content#admin-users_page table tr:nth-child(even), body .page-content#admin-categories_page table tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+body .page-content#admin-users-edit_page input[type=email] {
+  max-width: 250px;
 }/*# sourceMappingURL=style.css.map */

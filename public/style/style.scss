@@ -36,19 +36,27 @@ body {
 
     header {
         display: flex;
+        justify-content: space-between;
         gap: 1vw;
         align-items: baseline;
         padding: 2vh 2vw 1.5vw;
         background-color: #000;
 
-        a {
-            color: #FFF;
+        > div {
+            display: flex;
+            align-items: baseline;
+            gap: 2vw;
 
-            &#mainTitle {
+            #mainTitle {
+                color: #FFF; 
                 font-size: 30px;
                 font-weight: bold;
                 text-decoration: none;
                 border: none;
+            }
+    
+            .link {
+                color: #FFF; 
             }
         }
     }
@@ -67,6 +75,7 @@ body {
             flex-direction: column;
             gap: 2vh;
             width: fit-content;
+            margin-top: 2vh;
 
             input[type="text"],
             input[type="password"],
@@ -92,6 +101,13 @@ body {
                 width: fit-content;
 
                 .elem {
+
+                    > div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1vh;
+                    }
+
                     &.flex div div {
                         display: flex;
                         gap: 5px;
@@ -145,6 +161,10 @@ body {
             }
         }
 
+
+
+        // ADMIN
+
         &#admin_page {
             ul {
                 display: flex;
@@ -153,24 +173,18 @@ body {
             }
         }
 
-        &#admin-users_page {
+        &#admin-users_page,
+        &#admin-categories_page {
             table {
+                width: fit-content;
                 margin-top: 2vh;
-
-                td {
-                    padding: 1vh 1vw;
-                    border: 1px solid;
-                }
-            }
-
-            table {
-                font-family: #f2f2f2;
                 border-collapse: collapse;
-                width: 100%;
+
                 td {
                     border: 1px solid #ddd;
                     padding: 8px;
                 }
+
                 th {
                     border: 1px solid #ddd;
                     padding: 8px;
@@ -180,11 +194,18 @@ body {
                     background-color: #000;
                     color: #FFF;
                 }
+
                 tr {
                     &:nth-child(even) {
                         background-color: #f2f2f2;
                     }
                 }
+            }
+        }
+
+        &#admin-users-edit_page {
+            input[type="email"] {
+                max-width: 250px;
             }
         }
     }
