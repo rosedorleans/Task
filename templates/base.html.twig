@@ -29,6 +29,11 @@
                         <a href="{{ path('app_login') }}" class="hover link">Se connecter</a>
                         <a href="{{ path('app_register') }}" class="hover link">S'inscrire</a>
                 {% endif %}
+                {% for locale in locales %}
+                    {% if locale != app.request.locale %}
+                        <a href="{{ path('change_locale', {'locale': locale}) }}" class="link">{{ locale }}</a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </header>
 

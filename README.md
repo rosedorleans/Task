@@ -84,7 +84,7 @@
 - [x] Logs
 - [x] Tests 
 - [x] Sécurité (admin) (https://nouvelle-techno.fr/articles/live-coding-gerer-les-roles-utilisateur-avec-symfony-4)
-- [ ] Traduction 
+- [ ] Traduction (https://nouvelle-techno.fr/articles/live-coding-creer-un-site-multilingue-avec-symfony-4)
 - [x] Mail + Messenger
 - [ ] Api / Serialization
 - [x] Filtres (https://grafikart.fr/tutoriels/filtre-produit-symfony-1211)
