@@ -80,7 +80,7 @@ body {
                     outline:solid 1px #00000061;
                 }
             }
-            
+
             h2 {
                 margin: 1vh 0 -15px;
             }
@@ -109,11 +109,6 @@ body {
         }
 
         &#index_page {
-
-            // filters
-            form {
-                
-            }
 
             ul.task-list {
                 display: flex;
@@ -150,8 +145,18 @@ body {
             }
         }
 
+        &#admin_page {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+            }
+        }
+
         &#admin-users_page {
             table {
+                margin-top: 2vh;
+
                 td {
                     padding: 1vh 1vw;
                     border: 1px solid;

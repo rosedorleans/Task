@@ -6,20 +6,13 @@ use App\Entity\Category;
 
 class SearchData
 {
+    public int $page = 1;
 
-    /**
-     * @var int
-     */
-    public $page = 1;
-
-    /**
-     * @var string
-     */
-    public $q = '';
+    public string $q = '';
 
     /**
      * @var Category[]
      */
-    public $categories = [];
+    public array $categories = [];
 
 }

@@ -119,6 +119,14 @@ body .page-content#newTask_page form div {
 body .page-content#newTask_page form #task_date {
   flex-direction: row;
 }
+body .page-content#admin_page ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+body .page-content#admin-users_page table {
+  margin-top: 2vh;
+}
 body .page-content#admin-users_page table td {
   padding: 1vh 1vw;
   border: 1px solid;

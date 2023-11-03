@@ -1,15 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Admin{% endblock %}
+
+{% block idPageContent %}admin{% endblock %}
 
 {% block body %}
 
     <div>
-        <h2>Hello Admin !</h2>
+        <h2>Espace Admin</h2>
 
         <ul>
-            <li><a href="{{ path('admin_users') }}">Gérer les utilisateurs</a></code></li>
-            <li><a href="{{ path('admin_users') }}">Gérer les catégories</a></code></li>
+            <li><a href="{{ path('admin_users') }}" class="link">Gérer les utilisateurs</a></code></li>
+            <li><a href="{{ path('admin_users') }}" class="link">Gérer les catégories</a></code></li>
         </ul>
     </div>
 {% endblock %}
