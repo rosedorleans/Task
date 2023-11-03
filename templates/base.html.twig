@@ -5,6 +5,10 @@
         <title>Task - {% block title %}{% endblock %}</title>
         <link rel="shortcut icon" href="" type="image/x-icon">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ asset('style/style.css') }}">
         {% block stylesheets %}{% endblock %}
 
@@ -12,19 +16,19 @@
     </head>
     <body>
         <header>
-            <a id="mainTitle" href="{{ path('app_task_index') }}">Task</a>
-        {% if app.user %}
+            <a id="mainTitle" href="{{ path('app_task_index') }}" class="hover">Task</a>
+            {% if app.user %}
 
-            <a href="{{ path('app_logout') }}">Déconnexion</a>
-        {% else %}
+                <a href="{{ path('app_logout') }}" class="hover">Déconnexion</a>
+            {% else %}
 
-                <a href="{{ path('app_login') }}">Se connecter</a>
-                <a href="{{ path('app_register') }}">S'inscrire</a>
+                    <a href="{{ path('app_login') }}" class="hover">Se connecter</a>
+                    <a href="{{ path('app_register') }}" class="hover">S'inscrire</a>
 
-        {% endif %}
+            {% endif %}
+        </header>
 
-            </header>
-        <div id="{% block idPageContent %}{% endblock %}" class="page-content">
+        <div id="{% block idPageContent %}{% endblock %}_page" class="page-content">
             {% block body %}{% endblock %}
         </div>
 

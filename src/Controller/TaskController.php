@@ -4,7 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use App\Form\SearchForm;
+use App\Data\SearchData;
 use App\Repository\TaskRepository;
+use App\Repository\categoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,10 +17,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class TaskController extends AbstractController
 {
     #[Route('/', name: 'app_task_index', methods: ['GET'])]
-    public function index(TaskRepository $taskRepository): Response
+    public function index(TaskRepository $taskRepository, Request $request): Response
     {
+        $data = new SearchData();
+        $data->page = $request->get('page', 1);
+        $form = $this->createForm(SearchForm::class, $data);
+        $form->handleRequest($request);
+        $tasks = $taskRepository->findSearch($data);
+
         return $this->render('task/index.html.twig', [
-            'tasks' => $taskRepository->findAll(),
+            'tasks' => $tasks,
+            'form' => $form->createView()
         ]);
     }
     
@@ -43,6 +53,16 @@ class TaskController extends AbstractController
     #[Route('/task/show/{id}', name: 'app_task_show', methods: ['GET'])]
     public function show(Task $task): Response
     {
+        return $this->render('task/show.html.twig', [
+            'task' => $task,
+        ]);
+    }
+
+    public function getTasksByCategoryId(Category $category)
+    {
+        $categories = $this->getAllCategory($category);
+        $tasks = $em->getRepository('App:Task')->getByCategory($categories);
+
         return $this->render('task/show.html.twig', [
             'task' => $task,
         ]);

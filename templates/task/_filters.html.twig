@@ -1,0 +1,17 @@
+{{ form_start(form) }}
+    <h2>Filtrer</h2>
+    
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="body">
+        <div class="elem">
+            {{ form_row(form.q) }}
+        </div>
+        <div class="elem flex">
+            {{ form_row(form.categories) }}
+        </div>
+    </div>
+    <button type="submit" id="filter-task-submit" class="btn hover">{{ button_label|default('Chercher') }}</button>
+{{ form_end(form) }}
