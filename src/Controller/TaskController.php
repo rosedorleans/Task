@@ -16,7 +16,14 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/')]
 class TaskController extends AbstractController
 {
-    #[Route('/', name: 'app_task_index', methods: ['GET'])]
+
+    #[Route('/')]
+     public function indexNoLocale(): Response
+     {
+         return $this->redirectToRoute('app_task_index', ['_locale' => 'en']);
+     }
+
+    #[Route('/{_locale<%app.supported_locales%>}/', name: 'app_task_index', methods: ['GET'])]
     public function index(TaskRepository $taskRepository, Request $request): Response
     {
         $data = new SearchData();
