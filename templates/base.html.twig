@@ -29,11 +29,16 @@
                         <a href="{{ path('app_login') }}" class="hover link">Se connecter</a>
                         <a href="{{ path('app_register') }}" class="hover link">S'inscrire</a>
                 {% endif %}
-                {% for locale in locales %}
-                    {% if locale != app.request.locale %}
-                        <a href="{{ path('change_locale', {'locale': locale}) }}" class="link">{{ locale }}</a>
-                    {% endif %}
-                {% endfor %}
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-language" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ app.request.locale|locale_name(app.request.locale)|u.title }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-language">
+                        <li><a class="dropdown-item" href="{{ path('app_task_index', {_locale: 'en'}) }}">English</a></li>
+                        <li><a class="dropdown-item" href="{{ path('app_task_index', {_locale: 'fr'}) }}">Français</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
 

@@ -14,7 +14,7 @@
             {{ include('task/_filters.html.twig') }}
         {% endif %}
 
-        <h2>Liste des tâches</h2>
+        <h2>{{ "List of tasks"|trans|raw }}</h2>
 
         <ul class="task-list scroll">
             {% for task in tasks %}
@@ -33,7 +33,7 @@
                     {% endif %}
                 </li>
             {% else %}
-                <li>{% trans %}There's no task yet{% endtrans %}</li>
+                <li>Pas de taches</li>
             {% endfor %}
         </ul>
     </div>
