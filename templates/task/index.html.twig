@@ -8,7 +8,7 @@
     <div>
         {% if is_granted('ROLE_USER') %}
             <a href="{{ path('app_task_new') }}" class="btn hover new-task-btn">
-                Nouvelle tache
+                {{ "New task"|trans|raw }}
             </a>
 
             {{ include('task/_filters.html.twig') }}

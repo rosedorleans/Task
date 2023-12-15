@@ -21,9 +21,6 @@ class SearchForm extends AbstractType
             ->add('q', TextType::class, [
                 'label' => false,
                 'required' => false,
-                'attr' => [
-                    'placeholder' => 'Rechercher'
-                ]
             ])
             ->add('categories', EntityType::class, [
                 'label' => false,

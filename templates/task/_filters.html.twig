@@ -1,5 +1,5 @@
 {{ form_start(form) }}
-    <h2>Filtrer</h2>
+    <h2>{{ "Filters"|trans|raw }}</h2>
 
     <div class="my-custom-class-for-errors">
         {{ form_errors(form) }}
@@ -13,6 +13,6 @@
             {{ form_row(form.categories) }}
         </div>
     </div>
-    <button type="submit" id="filter-task-submit" class="btn hover">{{ button_label|default('Chercher') }}</button>
-    <a href="{{ path('app_task_index') }}" class="link hover">Réinitialiser</a>
+    <button type="submit" id="filter-task-submit" class="btn hover">{{ "Search"|trans|raw }}</button>
+    <a href="{{ path('app_task_index') }}" class="link hover">{{ "Reset"|trans|raw }}</a>
 {{ form_end(form) }}
