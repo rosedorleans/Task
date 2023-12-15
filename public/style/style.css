@@ -17,7 +17,7 @@ body .btn {
   font-size: 15px;
   font-weight: 600;
   color: #FFF;
-  background-color: #000;
+  background-color: #171717;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -25,7 +25,7 @@ body .btn {
 body .link {
   width: -moz-fit-content;
   width: fit-content;
-  color: #000;
+  color: #171717;
   text-decoration: none;
   border-bottom: 1px solid;
 }
@@ -35,7 +35,7 @@ body header {
   gap: 1vw;
   align-items: baseline;
   padding: 2vh 2vw 1.5vw;
-  background-color: #000;
+  background-color: #171717;
 }
 body header > div {
   display: flex;
@@ -64,7 +64,7 @@ body header > div #dropdown_lang ul.dropdown-inner {
   flex-direction: column;
   gap: 5px;
   padding: 20px;
-  background: #000;
+  background: #171717;
   border-radius: 0 0 5px 5px;
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
@@ -132,7 +132,23 @@ body .page-content#index_page ul.task-list {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  padding: 0;
+  max-height: 43vh;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px 0 0;
+  overflow-y: auto;
+}
+body .page-content#index_page ul.task-list::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+body .page-content#index_page ul.task-list::-webkit-scrollbar-track {
+  background-color: #eee;
+  border-radius: 10px;
+}
+body .page-content#index_page ul.task-list::-webkit-scrollbar-thumb {
+  background-color: #171717;
+  border-radius: 10px;
 }
 body .page-content#index_page ul.task-list li.task-elem {
   display: flex;
@@ -176,7 +192,7 @@ body .page-content#admin-users_page table th, body .page-content#admin-categorie
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #000;
+  background-color: #171717;
   color: #FFF;
 }
 body .page-content#admin-users_page table tr:nth-child(even), body .page-content#admin-categories_page table tr:nth-child(even) {

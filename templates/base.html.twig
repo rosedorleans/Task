@@ -24,10 +24,10 @@
             </div>
             <div>
                 {% if app.user %}
-                    <a href="{{ path('app_logout') }}" class="hover link">Déconnexion</a>
+                    <a href="{{ path('app_logout') }}" class="hover link">{{ "Logout"|trans|raw }}</a>
                 {% else %}
-                        <a href="{{ path('app_login') }}" class="hover link">Se connecter</a>
-                        <a href="{{ path('app_register') }}" class="hover link">S'inscrire</a>
+                        <a href="{{ path('app_login') }}" class="hover link">{{ "Login"|trans|raw }}</a>
+                        <a href="{{ path('app_register') }}" class="hover link">{{ "Sign in"|trans|raw }}</a>
                 {% endif %}
                 <div id="dropdown_lang">
                     <label for="dropdown_lang_checkbox" class="hover link">

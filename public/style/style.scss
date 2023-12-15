@@ -21,7 +21,7 @@ body {
         font-size: 15px;
         font-weight: 600;
         color: #FFF;
-        background-color: #000;
+        background-color: #171717;
         border: none;
         border-radius: 5px;
         text-decoration: none;
@@ -29,7 +29,7 @@ body {
 
     .link {
         width: fit-content;
-        color: #000;
+        color: #171717;
         text-decoration: none;
         border-bottom: 1px solid;
     }
@@ -40,7 +40,7 @@ body {
         gap: 1vw;
         align-items: baseline;
         padding: 2vh 2vw 1.5vw;
-        background-color: #000;
+        background-color: #171717;
 
         > div {
             display: flex;
@@ -76,7 +76,7 @@ body {
                     flex-direction: column;
                     gap: 5px;
                     padding: 20px;
-                    background: #000;
+                    background: #171717;
                     border-radius: 0 0 5px 5px;
                     opacity: 0;
                     transition: opacity .2s, visibility .2s;
@@ -161,7 +161,23 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 2vh;
-                padding: 0;
+                max-height: 43vh;
+                width: fit-content;
+                padding: 0 20px 0 0;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    height: 8px;
+                    width: 8px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: #eee;
+                    border-radius: 10px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #171717;
+                    border-radius: 10px;
+                }
 
                 li.task-elem {
                     display: flex;
@@ -222,7 +238,7 @@ body {
                     padding-top: 12px;
                     padding-bottom: 12px;
                     text-align: left;
-                    background-color: #000;
+                    background-color: #171717;
                     color: #FFF;
                 }
 

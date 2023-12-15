@@ -12,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Psr\Log\LoggerInterface;
 
 #[Route('/')]
 class TaskController extends AbstractController
@@ -24,13 +25,14 @@ class TaskController extends AbstractController
      }
 
     #[Route('/{_locale<%app.supported_locales%>}/', name: 'app_task_index', methods: ['GET'])]
-    public function index(TaskRepository $taskRepository, Request $request): Response
+    public function index(TaskRepository $taskRepository, Request $request, LoggerInterface $logger): Response
     {
         $data = new SearchData();
         $data->page = $request->get('page', 1);
         $form = $this->createForm(SearchForm::class, $data);
         $form->handleRequest($request);
         $tasks = $taskRepository->findSearch($data);
+        $logger->debug("affichage de la page d'acceuil", ['page'=>$data->page]);
 
         return $this->render('task/index.html.twig', [
             'tasks' => $tasks,
