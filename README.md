@@ -82,14 +82,13 @@
 - [x] ORM 
 - [x] Formulaire / Validation
 - [x] Logs
-- [ ] Tests 
+- [x] Tests 
 - [x] Sécurité (admin) (https://nouvelle-techno.fr/articles/live-coding-gerer-les-roles-utilisateur-avec-symfony-4)
 - [x] Traduction (https://symfony.com/doc/current/the-fast-track/en/28-intl.html)
 - [x] Mail + Messenger
-- [ ] Mail 2
 - [ ] Api / Serialization
+- [ ] Impersonate
 - [x] Filtres (https://grafikart.fr/tutoriels/filtre-produit-symfony-1211)
-- [ ] Pagination
 
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
